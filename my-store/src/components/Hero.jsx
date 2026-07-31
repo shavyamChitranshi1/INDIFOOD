@@ -9,128 +9,157 @@ const Carousel = CarouselModule.default;
 function Hero() {
   console.log(Carousel);
   const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   return (
     <div>
-   <Carousel responsive={responsive}>
-  <div>
-     <section className="hero">
+      <Carousel responsive={responsive}>
+        <div>
+          <section className="hero">
 
-      <div className="left">
+            <div className="left">
 
-        <ThreeScene />
+              <ThreeScene modelPath="../../public/models/abc2f51773224d109f8f35ad433642fa.glb" />
 
-      </div>
+            </div>
 
-      <div className="right">
+            <div className="right">
 
-        <h1>
-          Premium 3D Shopping Experience
-        </h1>
+              <h1>
+                Premium 3D Shopping Experience
+              </h1>
 
-        <p>
+              <p>
 
-          Explore our collection of high-quality
-          products in an immersive 3D environment.
-          Rotate, zoom and inspect products before
-          purchasing.
+                Explore our collection of high-quality
+                products in an immersive 3D environment.
+                Rotate, zoom and inspect products before
+                purchasing.
 
-        </p>
+              </p>
 
-        <button>
-          Explore Products
-        </button>
+              <button>
+                Explore Products
+              </button>
 
-      </div>
+            </div>
 
-    </section>
-  </div>
-  <div>
-     <section className="hero">
+          </section>
+        </div>
+        <div>
+          <section className="hero">
 
-      <div className="left">
+            <div className="left">
 
-        <ThreeScene />
+              <ThreeScene modelPath="../../public/models/monster.glb" />
 
-      </div>
+            </div>
 
-      <div className="right">
+            <div className="right">
 
-        <h1>
-          Premium 3D Shopping Experience
-        </h1>
+              <h1>
+                Premium 3D Shopping Experience
+              </h1>
 
-        <p>
+              <p>
 
-          Explore our collection of high-quality
-          products in an immersive 3D environment.
-          Rotate, zoom and inspect products before
-          purchasing.
+                Explore our collection of high-quality
+                products in an immersive 3D environment.
+                Rotate, zoom and inspect products before
+                purchasing.
 
-        </p>
+              </p>
 
-        <button>
-          Explore Products
-        </button>
+              <button>
+                Explore Products
+              </button>
 
-      </div>
+            </div>
 
-    </section>
-  </div>
-  <div>
-     <section className="hero">
+          </section>
+        </div>
+        <div>
+          <section className="hero">
 
-      <div className="left">
+            <div className="left">
 
-        <ThreeScene />
+              <ThreeScene modelPath="../../public/models/coca-cola.glb" />
+            </div>
 
-      </div>
+            <div className="right">
 
-      <div className="right">
+              <h1>
+                Premium 3D Shopping Experience
+              </h1>
 
-        <h1>
-          Premium 3D Shopping Experience
-        </h1>
+              <p>
 
-        <p>
+                Explore our collection of high-quality
+                products in an immersive 3D environment.
+                Rotate, zoom and inspect products before
+                purchasing.
 
-          Explore our collection of high-quality
-          products in an immersive 3D environment.
-          Rotate, zoom and inspect products before
-          purchasing.
+              </p>
 
-        </p>
+              <button>
+                Explore Products
+              </button>
 
-        <button>
-          Explore Products
-        </button>
+            </div>
 
-      </div>
+          </section>
+        </div>
+        <div>
+          <section className="hero">
 
-    </section>
-  </div>
-  <div>Item 4</div>
-</Carousel>
-</div>
+            <div className="left">
+
+              <ThreeScene modelPath="../../public/models/abc2f51773224d109f8f35ad433642fa.glb" />
+            </div>
+
+            <div className="right">
+
+              <h1>
+                Premium 3D Shopping Experience
+              </h1>
+
+              <p>
+
+                Explore our collection of high-quality
+                products in an immersive 3D environment.
+                Rotate, zoom and inspect products before
+                purchasing.
+
+              </p>
+
+              <button>
+                Explore Products
+              </button>
+
+            </div>
+
+          </section>
+        </div>
+      </Carousel>
+    </div>
   );
 }
-  
+
 
 export default Hero;

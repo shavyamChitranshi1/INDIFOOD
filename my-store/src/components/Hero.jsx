@@ -1,165 +1,125 @@
-import ThreeScene from "./ThreeScene";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import "../styles/hero.css";
-import { div } from "three/src/nodes/math/OperatorNode.js";
-import 'react-multi-carousel/lib/styles.css';
 
-import CarouselModule from "react-multi-carousel";
+import ThreeScene from "./ThreeScene";
 
-const Carousel = CarouselModule.default;
-function Hero() {
-  console.log(Carousel);
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+import { useNavigate } from "react-router-dom";
+
+const slides = [
+  {
+    category: "Dishes",
+    model: "/models/abc2f51773224d109f8f35ad433642fa.glb",
+    title: "Discover Every Dish Worth Travelling For",
+    description:
+      "Explore iconic dishes from around the world.",
+    button: "Explore Dishes",
+    route: "/products?category=dishes",
+  },
+
+  {
+    category: "Packaged Food",
+    model: "/models/abc2f51773224d109f8f35ad433642fa.glb",
+    title: "Every Snack Has A Personality",
+    description:
+      "Discover packaged foods loved by millions.",
+    button: "Explore Packaged Food",
+    route: "/products?category=packaged-food",
+  },
+
+  {
+    category: "Drinks",
+    model: "/models/monster.glb",
+    title: "Find Your Perfect Sip",
+    description:
+      "Compare beverages from around the world.",
+    button: "Explore Drinks",
+    route: "/products?category=drinks",
+  },
+
+  {
+    category: "Desserts",
+    model: "/models/coca-cola.glb",
+    title: "Life's Too Short To Skip Dessert",
+    description:
+      "Discover desserts with community reviews.",
+    button: "Explore Desserts",
+    route: "/products?category=desserts",
+  },
+];
+export default function Hero() {
+  const navigate = useNavigate();
+
   return (
-    <div>
-      <Carousel responsive={responsive}>
-        <div>
-          <section className="hero">
+    <section className="hero-wrapper">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        speed={900}
+        loop={true}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <section className="hero">
+              <div className="hero-left">
+                <ThreeScene modelPath={slide.model} />
+              </div>
 
-            <div className="left">
+              <div className="hero-right">
+                <span className="hero-category">
+                  {slide.category}
+                </span>
 
-              <ThreeScene modelPath="../../public/models/abc2f51773224d109f8f35ad433642fa.glb" />
+                <h1>{slide.title}</h1>
 
-            </div>
+                <p>{slide.description}</p>
 
-            <div className="right">
+                <button
+                  className="hero-btn"
+                  onClick={() => navigate(slide.route)}
+                >
+                  {slide.button}
+                </button>
 
-              <h1>
-                Premium 3D Shopping Experience
-              </h1>
+                <div className="craving-section">
+                  <h3>🔥 I'm craving...</h3>
 
-              <p>
+                  <div className="craving-grid">
+                    <button>🌶 Spicy</button>
 
-                Explore our collection of high-quality
-                products in an immersive 3D environment.
-                Rotate, zoom and inspect products before
-                purchasing.
+                    <button>🍫 Sweet</button>
 
-              </p>
+                    <button>🥤 Refreshing</button>
 
-              <button>
-                Explore Products
-              </button>
+                    <button>🧀 Cheesy</button>
 
-            </div>
+                    <button>🥔 Crunchy</button>
 
-          </section>
-        </div>
-        <div>
-          <section className="hero">
+                    <button>🍋 Tangy</button>
 
-            <div className="left">
+                    <button>🥩 Savoury</button>
 
-              <ThreeScene modelPath="../../public/models/monster.glb" />
-
-            </div>
-
-            <div className="right">
-
-              <h1>
-                Premium 3D Shopping Experience
-              </h1>
-
-              <p>
-
-                Explore our collection of high-quality
-                products in an immersive 3D environment.
-                Rotate, zoom and inspect products before
-                purchasing.
-
-              </p>
-
-              <button>
-                Explore Products
-              </button>
-
-            </div>
-
-          </section>
-        </div>
-        <div>
-          <section className="hero">
-
-            <div className="left">
-
-              <ThreeScene modelPath="../../public/models/coca-cola.glb" />
-            </div>
-
-            <div className="right">
-
-              <h1>
-                Premium 3D Shopping Experience
-              </h1>
-
-              <p>
-
-                Explore our collection of high-quality
-                products in an immersive 3D environment.
-                Rotate, zoom and inspect products before
-                purchasing.
-
-              </p>
-
-              <button>
-                Explore Products
-              </button>
-
-            </div>
-
-          </section>
-        </div>
-        <div>
-          <section className="hero">
-
-            <div className="left">
-
-              <ThreeScene modelPath="../../public/models/abc2f51773224d109f8f35ad433642fa.glb" />
-            </div>
-
-            <div className="right">
-
-              <h1>
-                Premium 3D Shopping Experience
-              </h1>
-
-              <p>
-
-                Explore our collection of high-quality
-                products in an immersive 3D environment.
-                Rotate, zoom and inspect products before
-                purchasing.
-
-              </p>
-
-              <button>
-                Explore Products
-              </button>
-
-            </div>
-
-          </section>
-        </div>
-      </Carousel>
-    </div>
+                    <button>☕ Bitter</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 }
-
-
-export default Hero;

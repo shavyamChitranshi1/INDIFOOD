@@ -1,34 +1,44 @@
 import "../styles/navbar.css";
+import { FiSearch } from "react-icons/fi";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav className="navbar">
+    <header className="navbar">
 
       <div className="logo">
-        MyStore
+        <span>🍽</span>
+        <h2>Cravely</h2>
       </div>
 
-      <div className="search">
+      <div className="search-bar">
+
+        <FiSearch className="search-icon" />
 
         <input
           type="text"
-          placeholder="Search Products..."
+          placeholder="What are you craving today?"
         />
 
       </div>
 
-      <ul className="nav-links">
+      <nav>
 
-        <li>Home</li>
-        <li>Products</li>
-        <li>Categories</li>
-        <li>About</li>
-        <li>Contact</li>
+        <ul className="nav-links">
 
-      </ul>
+          <li>Home</li>
 
-    </nav>
+          <li>Discover</li>
+
+          <li>Categories</li>
+
+          <li>Trending</li>
+
+          <li>About</li>
+
+        </ul>
+
+      </nav>
+
+    </header>
   );
 }
-
-export default Navbar;

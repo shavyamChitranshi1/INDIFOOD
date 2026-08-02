@@ -1,64 +1,448 @@
+/* ===========================================
+                HERO WRAPPER
+=========================================== */
+
+.hero-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(245,196,81,.08), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.03), transparent 35%),
+        linear-gradient(180deg,#0b0b0b,#090909);
+
+    position: relative;
+}
+
+/* ===========================================
+                  HERO
+=========================================== */
+
 .hero{
 
-    height:90vh;
+    min-height:100vh;
 
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
     align-items:center;
 
-    padding:0;
+    gap:4rem;
 
-    background:black;
-
-}
-
-.left{
-
-    width:50%;
-    height:650px;
+    padding:8rem 8% 4rem;
 
 }
 
-.right{
+/* ===========================================
+                MODEL
+=========================================== */
 
-    width:45%;
+.hero-left{
+
+    width:100%;
+    height:700px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ===========================================
+                CONTENT
+=========================================== */
+
+.hero-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/* ===========================================
+              CATEGORY
+=========================================== */
+
+.hero-category{
+
+    width:max-content;
+
+    padding:.55rem 1.25rem;
+
+    border-radius:999px;
+
+    background:rgba(245,196,81,.08);
+
+    border:1px solid rgba(245,196,81,.22);
+
+    color:#F5C451;
+
+    font-size:.9rem;
+
+    letter-spacing:.5px;
+
+    margin-bottom:2rem;
+
+}
+
+/* ===========================================
+                TITLE
+=========================================== */
+
+.hero-right h1{
 
     color:white;
 
-}
+    font-size:5.3rem;
 
-.right h1{
+    line-height:.95;
 
-    font-size:60px;
-    margin-bottom:25px;
+    letter-spacing:-3px;
 
-}
+    margin-bottom:2rem;
 
-.right p{
-
-    font-size:20px;
-    color:#bbb;
-
-    line-height:1.8;
+    max-width:750px;
 
 }
 
-.right button{
+/* ===========================================
+              DESCRIPTION
+=========================================== */
 
-    margin-top:35px;
+.hero-right p{
 
-    padding:16px 35px;
+    color:#9d9d9d;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    max-width:620px;
+
+    margin-bottom:2.5rem;
+
+}
+
+/* ===========================================
+                BUTTON
+=========================================== */
+
+.hero-btn{
+
+    width:240px;
+
+    height:60px;
 
     border:none;
 
-    border-radius:10px;
+    border-radius:999px;
 
-    font-size:18px;
+    background:#F5C451;
 
-    background:#4da3ff;
+    color:#111;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    margin-bottom:3rem;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(245,196,81,.22);
+
+}
+
+/* ===========================================
+              CRAVINGS
+=========================================== */
+
+.craving-section h3{
 
     color:white;
 
+    margin-bottom:1.2rem;
+
+    font-size:1.15rem;
+
+}
+
+.craving-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.craving-grid button{
+
+    padding:.9rem 1.35rem;
+
+    border-radius:999px;
+
+    border:1px solid #2c2c2c;
+
+    background:#161616;
+
+    color:#d8d8d8;
+
     cursor:pointer;
+
+    transition:.3s;
+
+    font-size:.95rem;
+
+}
+
+.craving-grid button:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#F5C451;
+
+    color:white;
+
+    background:#1f1f1f;
+
+}
+
+/* ==========================
+      SWIPER ARROWS
+========================== */
+
+:root{
+
+    --swiper-navigation-color:#fff;
+    --swiper-navigation-size:42px;
+
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+
+    color:#fff !important;
+
+    opacity:.65;
+
+    transition:.35s;
+
+}
+
+.swiper-button-prev{
+
+    left:60px !important;
+
+}
+
+.swiper-button-next{
+
+    right:60px !important;
+
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+
+    color:#F5C451 !important;
+
+    opacity:1;
+
+    transform:scale(1.18);
+
+}
+/* ===========================================
+          PAGINATION
+=========================================== */
+
+.swiper-pagination{
+
+    bottom:40px !important;
+
+}
+
+.swiper-pagination-bullet{
+
+    width:10px;
+
+    height:10px;
+
+    background:#666;
+
+    opacity:1;
+
+    transition:.3s;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    width:30px;
+
+    border-radius:999px;
+
+    background:#F5C451;
+
+}
+
+/* ===========================================
+        CUSTOM ARROWS
+=========================================== */
+
+.swiper-button-prev,
+.swiper-button-next{
+
+    width:65px !important;
+    height:65px !important;
+
+    background:transparent;
+
+    border:none;
+
+    transition:.35s;
+
+}
+
+.swiper-button-prev{
+
+    left:35px !important;
+
+}
+
+.swiper-button-next{
+
+    right:35px !important;
+
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+
+    font-size:42px !important;
+
+    font-weight:100;
+
+    color:rgba(255,255,255,.35);
+
+    transition:.3s;
+
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after{
+
+    color:#F5C451;
+
+    transform:scale(1.25);
+
+}
+
+/* ===========================================
+            RESPONSIVE
+=========================================== */
+
+@media(max-width:1200px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+padding-top:8rem;
+
+}
+
+.hero-left{
+
+height:500px;
+
+}
+
+.hero-right{
+
+align-items:center;
+
+}
+
+.hero-category{
+
+margin:auto;
+
+margin-bottom:2rem;
+
+}
+
+.hero-right h1{
+
+font-size:4rem;
+
+}
+
+.craving-grid{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:7rem 2rem 3rem;
+
+}
+
+.hero-left{
+
+height:350px;
+
+}
+
+.hero-right h1{
+
+font-size:3rem;
+
+}
+
+.hero-right p{
+
+font-size:1rem;
+
+}
+
+.hero-btn{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+
+display:none;
+
+}
 
 }

@@ -1,0 +1,49 @@
+.product-page{
+    width:100%;
+    min-height:100vh;
+
+    background:#090909;
+
+    color:white;
+
+    padding:2rem 6rem;
+
+}
+.Product-Info{
+    display: flex;
+    justify-content: space-between;
+    gap:4rem;
+}
+.page-row{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:2rem;
+
+    margin-top:2rem;
+
+}
+.SimilarFood{
+    display:flex;
+}
+.full-width{
+
+    margin-top:2rem;
+
+}
+
+@media (max-width:1100px){
+
+    .product-page{
+
+        padding:2rem;
+    }
+
+    .page-row{
+
+        grid-template-columns:1fr;
+    }
+
+}

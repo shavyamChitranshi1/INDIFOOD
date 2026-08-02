@@ -1,0 +1,47 @@
+.history-map{
+    width:100%;
+    display:flex;
+    gap:40px;
+
+    background:#121212;
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-top:50px;
+}
+
+.history-section{
+    flex:2;
+}
+
+.map-section{
+    flex:1;
+}
+
+.history-section h2,
+.map-section h2{
+    color:white;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.history-section p{
+    color:#b8b8b8;
+    font-size:17px;
+    line-height:1.9;
+    text-align:justify;
+    margin-bottom:22px;
+}
+
+.map-placeholder{
+    width:100%;
+    height:320px;
+
+    background:black;
+
+    border-radius:18px;
+
+    border:1px solid #2d2d2d;
+}

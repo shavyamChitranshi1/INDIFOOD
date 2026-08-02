@@ -1,0 +1,105 @@
+.taste-profile{
+
+    margin-top:5rem;
+
+    padding:3rem;
+
+    border-radius:24px;
+
+    background:#101010;
+
+    border:1px solid #242424;
+
+    color:white;
+
+}
+
+.taste-header{
+
+    margin-bottom:2.5rem;
+
+}
+
+.taste-header h2{
+
+    font-size:2rem;
+
+    margin-bottom:.5rem;
+
+}
+
+.taste-header p{
+
+    color:#8a8a8a;
+
+}
+
+.taste-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.8rem;
+
+}
+
+.taste-item{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 70px;
+
+    align-items:center;
+
+    gap:1.5rem;
+
+}
+
+.taste-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    font-size:1.1rem;
+
+}
+
+.bar{
+
+    height:12px;
+
+    background:#222;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #ffb703,
+        #fb8500
+    );
+
+    transition:.6s ease;
+
+}
+
+.score{
+
+    color:#d8d8d8;
+
+    font-weight:600;
+
+}
